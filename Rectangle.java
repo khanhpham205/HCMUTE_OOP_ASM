@@ -7,20 +7,21 @@ public class Rectangle {
         this.height = height;
     }
 
-    public double getArea() {
+    public double area() {
         return width * height;
     }
 
-    public double getPerimeter() {
+    public double perimeter() {
         return 2 * (width + height);
     }
+
     public boolean isSquare() {
         return width == height;
     }
 
     public void showInfo() {
         System.out.println(
-                "Hình chữ nhật: Chiều rộng: " + width + " | Chiều cao: " + height + " | Diện tích: " + getArea() + " | Chu vi: " + getPerimeter()
+                "Hình chữ nhật: Chiều rộng: " + width + " | Chiều cao: " + height + " | Diện tích: " + area() + " | Chu vi: " + perimeter()
         );
     }
 }

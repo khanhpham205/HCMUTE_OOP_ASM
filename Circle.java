@@ -5,17 +5,17 @@ public class Circle {
         this.radius = radius;
     }
 
-    public double getArea() {
+    public double area() {
         return Math.PI * radius * radius;
     }
 
-    public double getCircumference() {
+    public double circumference() {
         return 2 * Math.PI * radius;
     }
 
     public void showInfo() {
         System.out.println(
-                "Hình tròn: Bán kính: " + radius + " | Diện tích: " + getArea() + " | Chu vi: " + getCircumference()
+            "Hình tròn: Bán kính: " + radius + " | Diện tích: " + area() + " | Chu vi: " + circumference()
         );
     }
 }
