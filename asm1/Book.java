@@ -1,7 +1,8 @@
+package asm1;
 public class Book {
     private String title;
     private String author;
-    private double price; // Đổi sang double theo yêu cầu đề bài
+    private double price;
     private boolean inStock;
 
     public Book(String title, String author, double price, boolean inStock) {
