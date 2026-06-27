@@ -1,14 +1,7 @@
 public class Lecturer extends Reader {
-    private String department;
-    private String cardType = "Thẻ Giảng Viên";
-
-    public Lecturer(String readerID, String fullName, String email, String department) {
-        super(readerID, fullName, email);
-        this.department = department;
+    public Lecturer(String id, String name, String email) {
+        super(id, name, email);
     }
-
-    public String getDepartment() { return department; }
-    public void setDepartment(String department) { this.department = department; }
 
     @Override
     public int getMaxBorrow() {
@@ -17,8 +10,6 @@ public class Lecturer extends Reader {
 
     @Override
     public String toString() {
-        return super.toString()
-             + " | Khoa: " + department
-             + " | Loại thẻ: " + cardType;
+        return super.toString() + " | Type: Lecturer | Max borrow: " + getMaxBorrow();
     }
 }

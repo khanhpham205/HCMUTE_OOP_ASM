@@ -1,34 +1,44 @@
 public class Reader {
-    private String readerID;
-    private String fullName;
+    private String id;
+    private String name;
     private String email;
 
-    public Reader(String readerID, String fullName, String email) {
-        this.readerID = readerID;
-        this.fullName = fullName;
+    public Reader(String id, String name, String email) {
+        this.id = id;
+        this.name = name;
         this.email = email;
     }
 
-    // Getters
-    public String getReaderID() { return readerID; }
-    public String getFullName()  { return fullName; }
-    public String getEmail()     { return email; }
+    public String getId() {
+        return id;
+    }
 
-    // Setters
-    public void setReaderID(String readerID) { this.readerID = readerID; }
-    public void setFullName(String fullName)  { this.fullName = fullName; }
-    public void setEmail(String email)        { this.email = email; }
+    public void setId(String id) {
+        this.id = id;
+    }
 
-    // Trả về số sách tối đa được mượn; lớp con sẽ ghi đè
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
     public int getMaxBorrow() {
         return 0;
     }
 
     @Override
     public String toString() {
-        return "Mã độc giả: " + readerID
-             + " | Họ tên: " + fullName
-             + " | Email: " + email
-             + " | Mượn tối đa: " + getMaxBorrow() + " cuốn";
+        return String.format("[Reader] %s - %s | %s", id, name, email);
     }
 }

@@ -1,38 +1,60 @@
 public class Book {
-    private String bookID;
+    private String id;
     private String title;
     private String author;
-    private int publishYear;
+    private int year;
     private int quantity;
 
-    public Book(String bookID, String title, String author, int publishYear, int quantity) {
-        this.bookID      = bookID;
-        this.title       = title;
-        this.author      = author;
-        this.publishYear = publishYear;
-        this.quantity    = quantity;
+    public Book(String id, String title, String author, int year, int quantity) {
+        this.id = id;
+        this.title = title;
+        this.author = author;
+        this.year = year;
+        this.quantity = quantity;
     }
 
-    // Getter
-    public String getBookID()      { return bookID; }
-    public String getTitle()       { return title; }
-    public String getAuthor()      { return author; }
-    public int    getPublishYear() { return publishYear; }
-    public int    getQuantity()    { return quantity; }
+    public String getId() {
+        return id;
+    }
 
-    // Setter
-    public void setBookID(String bookID)           { this.bookID = bookID; }
-    public void setTitle(String title)             { this.title = title; }
-    public void setAuthor(String author)           { this.author = author; }
-    public void setPublishYear(int publishYear)    { this.publishYear = publishYear; }
-    public void setQuantity(int quantity)          { this.quantity = quantity; }
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
 
     @Override
     public String toString() {
-        return "Mã sách: " + bookID
-             + " | Tên: " + title
-             + " | Tác giả: " + author
-             + " | Năm XB: " + publishYear
-             + " | Số lượng: " + quantity;
+        return String.format("[Book] %s - %s | %s | %d | Qty: %d", id, title, author, year, quantity);
     }
 }

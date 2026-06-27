@@ -1,14 +1,7 @@
 public class Student extends Reader {
-    private String studentID;
-    private String cardType = "Thẻ Sinh Viên";
-
-    public Student(String readerID, String fullName, String email, String studentID) {
-        super(readerID, fullName, email);
-        this.studentID = studentID;
+    public Student(String id, String name, String email) {
+        super(id, name, email);
     }
-
-    public String getStudentID() { return studentID; }
-    public void setStudentID(String studentID) { this.studentID = studentID; }
 
     @Override
     public int getMaxBorrow() {
@@ -17,8 +10,6 @@ public class Student extends Reader {
 
     @Override
     public String toString() {
-        return super.toString()
-             + " | MSSV: " + studentID
-             + " | Loại thẻ: " + cardType;
+        return super.toString() + " | Type: Student | Max borrow: " + getMaxBorrow();
     }
 }
